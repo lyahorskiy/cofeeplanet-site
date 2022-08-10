@@ -26,15 +26,7 @@ body{
 	line-height: 1.5;
 }
 
-.btn-reset{
-	appearance: none;
-  	border-radius: 0;
-  	opacity: 1;
-	border: none;
-	background-color: transparent;
-	font: inherit;
-	cursor: pointer;
-}
+
 
 ::-webkit-scrollbar{
 	width: 10px;
@@ -132,3 +124,60 @@ a{
 }
 
 /* General */
+
+.banner{
+	padding-top: 167px;
+	padding-bottom: 269px;
+	background-image: url(../img/First\ screen.jpg);
+	background-size: cover;
+	background-position: center;
+	&__text{
+		font-size: 90px;
+		line-height: 110px;
+		margin: 0;
+		margin-bottom: 56px;
+		.size(7);
+
+	}
+
+	&__btn{
+
+		&_colored{
+			border: 2px solid transparent;
+			color: #fff;
+			padding-left: 55px;
+			padding-right: 55px;
+			height: 56px;
+			vertical-align: bottom;
+			background: @colorMain;
+			border-radius: 50px;
+			font-weight: @fontSBold;
+			font-size: 16px;
+			line-height: 20px;
+			transition: @transT;
+			&:hover{
+			background-color: @colorGreenHover;
+			}
+
+		}
+		&_trans{
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 20px;			
+			padding-left: 55px;
+			padding-right: 55px;
+			height: 56px;
+			margin-left: 18px;
+			vertical-align: bottom;
+			border: 2px solid @colorGreenHover;
+			border-radius: 50px;
+			transition: @transT;
+			&:hover{
+				background-color: @colorGreenHover;
+				color: #fff;
+				}
+			
+
+		}
+	}
+}
