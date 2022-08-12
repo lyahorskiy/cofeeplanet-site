@@ -122,12 +122,13 @@ a{
 	clip: rect(0 0 0  0);
 	overflow: hidden;
 }
-	.main-heading{
+.main-heading{
 		font-size: 48px;
 		line-height: 59px;
 		margin: 0;
 		text-align: center;
-	}
+		line-height: 1.1;
+}
 
 
 /* General */
@@ -187,4 +188,84 @@ a{
 
 		}
 	}
+}
+
+.menu{	
+	padding-top: 170px;
+	padding-bottom: 84px;
+	&__h{
+		padding-bottom: 44px;
+	}
+	&__text{
+		padding-bottom: 52px;
+		width: 50%;
+		text-align: center;
+		margin: 0 auto;
+		font-weight: @fontNormal;
+		font-size: 14px;
+		line-height: 1.5;
+		color: @colorTGreySections;
+	}
+	&__tabs{
+		margin-bottom: 40px;
+		}
+}
+
+.tabs{
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	
+	&__item{
+		padding-left: @offset / 2;
+		padding-right: @offset / 2;
+		& + &{
+		margin-left: 70px;
+		}
+		&.active,
+		&:hover{
+			border-bottom: 2px solid @colorGreenHover;
+			a{
+				color: @colorMain;
+			}
+		}
+		}
+
+	&__link{
+		font-weight: @fontSBold;
+		line-height: 1.5;
+		color: #000;
+	}
+		
+	
+}
+.tabs-content{
+	&__section{
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
+	&__wrap{
+		.row-flex();
+	}
+}
+.product{
+	.col();
+	.size(3);
+	text-align: center;
+	
+		&__pic{
+			margin-bottom: 24px;
+		}
+
+		&__name{
+			margin: 0;
+			margin-bottom: 8px;
+		}
+
+		&__price{
+			color: @colorMain;
+			font-weight: @fontSBold ;
+		}
 }
