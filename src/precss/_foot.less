@@ -1,22 +1,62 @@
 .modal-overlay{
+    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: rgba(0,0,0,0.7);
+    &__close{
+        .btn-reset();
+            padding: 0;
+            background-color: transparent;
+            position: absolute;
+            top: 3%;
+            right: 9.7%;
+            @size: 16px;
+            width: @size;
+            height: @size;
+        &:focus{
+            box-shadow: none;
+        }
+        &::before,
+        &::after{
+            content:'';
+            display: block;
+            position: absolute;
+            border-bottom: 2px solid #fff;
+            top: 50%;
+            margin-top: -1px;
+            width: 100%;
+        }
+            &::before{
+                transform: rotate(45deg);
+            }
+            &::after{
+                transform: rotate(-45deg);
+             }
+        
+    }
+    &.active{
+        display: block;
+    }
 
 }
 .modal{
+   display: none;
     width: 97%;
     padding: 10px;
     position: absolute;
     max-width: 964px;
     background-color: #fff;
     border-radius: 4px;
+    min-height: 50%;
     max-height: 60%;
     overflow-y: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    &.active{
+        display: block;
+    }
 }
