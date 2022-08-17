@@ -231,6 +231,7 @@ a{
 		&.active,
 		&:hover{
 			border-bottom: 2px solid @colorGreenHover;
+			transition: 0.3s;
 			a{
 				color: @colorMain;
 			}
@@ -293,13 +294,16 @@ a{
 		padding: 0;
 		
 		&:focus{
-			outline-offset: solid 1px @colorMain;
+			outline-offset: solid 1px @colorGreenHover;
 			box-shadow: 2px 2px 5px @colorGreenHover;
 			border-radius: 1rem;
+			transition: 0.3s;
+			color: @colorGreenHover;
 		}
 		&:hover{
-			color: @colorMain;
-			border-bottom: 1px solid @colorGreenHover ;
+			color: @colorGreenHover;
+			border-bottom: 1px solid @colorGreenHover;
+			transition: 0.3s;
 		}
 
 	}
@@ -356,6 +360,7 @@ a{
 		.btn-reset();
 		width: 25px;
 		padding: 0;
+	
 	
 		
 		&:focus{

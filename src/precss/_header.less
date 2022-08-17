@@ -33,25 +33,34 @@
          
         & + &{
             margin-left: 20px;
-           
-        }
-        &::after{
-            content:''; 
-            display: block;
-            width: 0;
-            border-bottom: 1px solid @colorGreenHover;
 
         }
-        &:hover::after{
-          width: 100%;
-          transition: width @transT;  
+       
+        // &::after{
+        //     content:''; 
+        //     display: block;
+        //     width: 100%;
+        //     border-bottom: 1px solid @colorGreenHover;
+
+        // }
+        // &:hover::after{
+        //   width: 100%;
+        //  color: @colorGreenHover;  
             
-        }
+        // }
     }
     
     &__link{
         color: #000;
         font-weight: @fontNormal;
         font-size: 14px;
+        &:hover{
+            border-bottom: 2px solid @colorGreenHover;
+            color: @colorMain;
+            transition: 0.3s;
+            
+        }
+
     }
+
 }
