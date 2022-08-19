@@ -389,18 +389,22 @@ a{
 .features{
 
 	text-align: center;
+	margin: 0;
+	padding: 0 @omlet / 2;
+
+	
 	& img{
-		
-		padding-left: 120px;
-		padding-right: 120px;
+		margin: 0;
+		padding: 0;
 		padding-bottom: 19px;
 		padding-top: 10px;
 		
-
-	
-
 		
-	
+	}
+	& h3{
+		font-size: 18px;
+		line-height: 1.2;
+		font-weight: @fontSBold;
 		
 	}
 	&_h{
@@ -418,14 +422,83 @@ a{
 		line-height: 1.5;
 		margin-bottom: 92px;
 	}
-	&_menu{
-		
-		background-color: #ddd;
+	
+		&__wrap{
+			.row-flex();
+		}
 
 	
+
+	 & .feature{
+		.col();
+		.size(2.9);
+		height: 138px;
+		background-color: #fff;
+		
+ }
+ 		& .polosa{
+			margin: 0;
+			padding: 0;
+			height: 138px;
+			width: 0.5px;
+			background-color:#ddd;	
+		}
 	}
-}
-.feature{
+
+.visitors{
 	
-	background-color: #fff;
+	&_head{
+		margin-top: 234px;
+		padding-bottom: 60px;
+		font-size: 48px;
+		line-height: 1.2;
+		text-align: center;
+	}
+	& .visitor__lists{
+		&__wrap{
+			.row-flex();
+			
+		}
+
+	
+	&__list{
+		.col();
+		.size(4);
+		padding-top: 70px;
+		padding-bottom: 70px;
+		padding-left: 32px;
+		padding-right: 32px;
+		height: 512px;
+		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+		border-radius: 10px;
+
+		&__photo{
+			padding-bottom: 38px;
+			
+			
+		}
+		&__he{
+			padding-bottom: 21px;
+			font-weight: @fontSBold;
+			font-size: 18px;
+			line-height: 1.2px;
+			color: @colorTGreyContent;
+
+		}
+		&__text{
+			padding-bottom: 32px;
+			font-size: 16px;
+			line-height: 147.1%;
+			color: @colorTGreyContent;
+		}
+		&__date{
+			font-style: italic;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 147.1%;
+			color: #777;
+		}
+	}
+	}
+
 }
