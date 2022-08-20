@@ -1,21 +1,65 @@
 
 .form{
-    &_head{
-        
-        font-size: 48px;
-        line-height: 1.2;
-        padding-bottom: 58px;
-    }
+   
     &-block{
+        display: flex;
+        justify-content: space-between;
+        &-map{
+            margin-top: 170px;
+            width: 767px;
+            height: 461px;
+            margin-bottom: 50px;
+        }
         &-lists{
+
+             &-head{
+                margin-top: 242px;
+                font-size: 48px;
+                line-height: 1.2;
+                padding-bottom: 58px
+             }
+
+             & a{
+                
+             &:focus{
+                box-shadow: none;
+            }
+             }
+             &-link{
+                
+                margin-top: 45px;
+                margin-right: 11px;
+                &:hover{
+                    transform: rotateY(360deg);
+                    transition: 2s; 
+                } 
+                
+             }
+
             &-list{
                 display: flex;
-                & img{
-                    width: 16px;
-                    height: 16px;
-                }
+                align-items: baseline;
+
+               & img{
+                padding-right: 13px;
+               }
+
+               & p{
+                font-size: 16px;
+                line-height: 1.25;
+                padding-bottom: 18px;
+               }
+
             }
+        
         }
+    }
+     &-copiright{
+        text-align: center;
+        margin-bottom: 36px;
+        font-size: 14px;
+        line-height: 1.2px;
+        color: @colorTGreySections;
     }
 }
 
