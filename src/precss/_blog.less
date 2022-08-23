@@ -99,9 +99,12 @@
         
     }
     &_figure{
-        max-width: 1160px;
         margin: 0;
-        margin-bottom: 6px;
+        
+        &_image{
+            width: 100%;
+            margin-bottom: 6px;
+        }
         &_figcaption{
             font-size: 13px;
             line-height: 1.2;
@@ -119,30 +122,139 @@
 
     }
     &_lists{
-        border: 1px solid #777;
+        width: 100%;
         display:flex;
+        margin-bottom: 142px;
 
-        &_list{
-            border: 1px solid #777;
             
+        &_list{
+            border: 1px solid #eee;
+            
+           
+            
+            &.border{
+                border-left: none;
+            }
+        
         &_h3{
-            border: 1px solid #777;
+            border-bottom: 1px solid #eee;
+            padding-top: 14px;
+            padding-bottom: 8px;
             font-size: 18px;
             line-height: 1.3;
-            margin-bottom: 16px;
-            margin-left: 38px;
+            padding-left: 38px;
 
         }
         &_text{
-            border: 1px solid #777;
+            padding-top: 8px;
+            padding-bottom: 8px;
             font-size: 14px;
             line-height: 1.5;
-            padding-right: 38px;
-            padding-left: 38px;
+            padding-right: 36px;
+            padding-left: 36px;
+            border-bottom: 1px solid #eee;
+
+        &.not{
+            border-bottom: none;
+        }
+              
+        }
+        
+        }
+        
+    }
+    
+}
+.blog2{
+    
+    &_h2{
+        font-size: 36px;
+        line-height: 1.2;
+        margin-bottom: 24px;
+    }
+    &_figu{
+        margin: 0;
+        &_image{
+            width: 100%;
+            margin-bottom: 6px;
+        }
+        &_figcaption{
+            color: #777;
+            font-size: 13px;
+            line-height: 1.3;
+            margin-bottom: 32px;
+        
+        }
+    }
+    &_paragraph1{
+        .text();
+        margin-bottom: 24px;
+    }
+    &_paragraph2{
+        .text();
+        margin-bottom: 52px;
+
+    }
+
+    &_h3{
+        font-weight: @fontSBold;
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 24px;   
+    }
+
+    &_lists{
+        
+        &_list{
+            ::before{
+                content:'';
+                display: block;
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: #000;
+                margin-top: 8px;
+                margin-left: -20px;  
+            }
 
             
             
+           
+            &_h3{
+                font-weight: @fontSBold;
+                font-size: 18px;
+                line-height: 1.2;
+                margin-bottom: 24px;
+
+            }
+            &_text{
+                
+                font-size: 16px;
+                line-height: 1.5;
+                margin-bottom: 24px;
+                padding-left: 54px;
+               
+                &.lost{
+                    margin-bottom: 52px;
+                }
+                &.end{
+                    margin-bottom: 32px;
+                }
+                
+            }
+           
         }
+    }
+    &_last{
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 114px;
+        span{
+            
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 1.7;
         }
     }
 }
