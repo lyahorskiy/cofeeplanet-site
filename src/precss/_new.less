@@ -1,0 +1,57 @@
+
+.media-max(@breakpoint, @rules){
+    @media screen and (max-width: @breakpoint){ 
+        @rules();
+     
+    }
+}
+.media-min(@breakpoint, @rules){
+    @media screen and (min-width: @breakpoint){ 
+        @rules();
+     
+    }
+}
+main{
+    padding-top: 100px;  
+}
+.exemple{
+    background-color: #777;
+    &_h{
+        font-size: 60px;
+        text-align: center;
+
+
+       .media-max( 500px, {
+            font-size: 16px;
+            color: blue;
+       });
+ 
+        .media-min( 550px, {
+            color: red;
+        });
+    }
+    }
+
+    &_block{
+
+    }
+   
+    &_text{
+        font-size: 36px;
+        font-weight: bold;
+        
+    }
+
+
+// @media screen and ( max-width: 500px ){
+//     .exemple{
+//         &_h{
+//           font-size: 20px;  
+//         }
+//         &_text{
+//             font-size: 16px;
+//             font-weight: normal;        
+//         }
+
+//     }
+// }
