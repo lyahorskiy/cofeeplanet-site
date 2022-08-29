@@ -1,10 +1,6 @@
 
 
-.media-max(@breakpoint, @rules){
-    @media screen and (max-width: @breakpoint){ 
-        @rules();
-    }
-}
+
 .main-header{
     padding-top: 45px;
     width: 100%;
@@ -47,6 +43,7 @@
         }  
     }
     &_button{
+        display: none;
        
   
         .btn-reset();
@@ -82,4 +79,14 @@
 
     }
 
+}
+@media screen and ( max-width: 1000px ){
+    .main-navigation{
+        display: none;
+    &_slice{
+        display: block;
+    }
+    }    
+    
+    
 }
