@@ -142,15 +142,26 @@ a{
 	background-size: cover;
 	background-position: center;
 	&__text{
-		font-size: 90px;
-		line-height: 110px;
+		
+		font-size: 7vw;
+		line-height: 9vw;
 		margin: 0;
 		margin-bottom: 56px;
 		.size(7);
+		.media-max(490px, {
+			font-size: 26px;
+			line-height: 1.2;
+
+			
+		
+		});
+		
+		
 
 	}
 
 	&__btn{
+		
 
 		&_colored{
 			border: 2px solid transparent;
@@ -165,9 +176,24 @@ a{
 			font-size: 16px;
 			line-height: 20px;
 			transition: @transT;
+			width: 214px;
 			&:hover{
 			background-color: @colorGreenHover;
 			}
+			.media-max(500px, {
+				margin: auto;
+				position: absolute;
+				top: 0%; left: 0; bottom: 15%; right: 0;
+			
+				
+			
+			});
+			.media-max(380px, {
+				margin: auto;
+				  position: absolute;
+				  top: 30%; left: 0; bottom: 20%; right: 0;
+			
+			});
 
 		}
 		&_trans{
@@ -182,11 +208,23 @@ a{
 			border: 2px solid @colorGreenHover;
 			border-radius: 50px;
 			transition: @transT;
+			width: 214px;
 			&:hover{
 				background-color: @colorGreenHover;
 				color: #fff;
 				}
-			
+				.media-max(500px, {
+					margin: auto;
+  					position: absolute;
+  					top: 0%; left: 0; bottom: 0; right: 0;
+				
+				});
+				.media-max(380px, {
+					margin: auto;
+  					position: absolute;
+  					top: 30%; left: 0; bottom: 0; right: 0;
+				
+				});
 
 		}
 	}
@@ -350,6 +388,8 @@ a{
 	}
 	&__img{
 		vertical-align: bottom;
+
+
 	}
 	&__btns{
 		margin: 0;
