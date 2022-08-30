@@ -15,7 +15,9 @@
 
     }
     
-
+    // .but{
+    //     display: none;
+    // }
 }
 &:focus{
     outline-offset: solid 1px @colorMain;
@@ -43,14 +45,14 @@
         }  
     }
     &_button{
-        display: none;
-       
+        
+       display: none;
   
         .btn-reset();
         
         position: absolute;
-        right: 58px;
-        top: 46px;
+        right: 0px;
+        top: 50px;
        
        
         &_slice{
@@ -78,15 +80,20 @@
         }
 
     }
+    
 
-}
-@media screen and ( max-width: 1000px ){
-    .main-navigation{
-        display: none;
-    &_slice{
-        display: block;
-    }
-    }    
-    
     
 }
+@media screen and ( max-width: 845px ){
+    .main-navigation__links{
+            display: none;
+        }
+       
+      .main-navigation_button{
+        display:block;
+    
+        
+      }
+   
+    }      
+
