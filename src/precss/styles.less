@@ -264,11 +264,11 @@ a{
 		line-height: 1.5;
 		color: @colorTGreySections;
 		.media-max(630px, {
-			width: 100%;
+			width: 90%;
 			line-height: 1.2;
 		});
 		.media-max(380px, {
-			width: 100%;
+			width: 90%;
 			line-height: 1.2
 		
 		});
@@ -505,6 +505,10 @@ a{
 		font-size: 18px;
 		line-height: 1.2;
 		font-weight: @fontSBold;
+		.media-max(590px, {
+			
+			font-size: 14px;
+		});
 		
 	}
 	&_h{
@@ -512,19 +516,30 @@ a{
 		font-size: 48px;
 		line-height: 1.2;
 		margin-bottom: 26px;
+		.media-max(550px, {
+			text-align: center;
+			font-size: 30px;
+		});
 
 	}
 	&_text{
-		width: 570px;
+		max-width: 50%;
 		margin: 0 auto;
 		color: @colorTGreySections;
 		font-size: 14px;
 		line-height: 1.5;
 		margin-bottom: 92px;
+		.media-max(550px, {
+			max-width: 80%;
+			text-align: center;
+			font-size: 14px;
+		});
 	}
 	
 		&__wrap{
+	
 			.row-flex();
+			justify-content: center;
 		}
 
 	
@@ -534,6 +549,11 @@ a{
 		.size(2.9);
 		height: 138px;
 		background-color: #fff;
+		.media-max(550px, {
+		.col();
+		.size(5);
+	
+		});
 		
  }
  		& .polosa{
@@ -542,6 +562,10 @@ a{
 			height: 138px;
 			width: 0.5px;
 			background-color:#ddd;	
+			.media-max(550px, {
+				display:none;
+			
+				});
 		}
 	}
 
@@ -553,6 +577,18 @@ a{
 		font-size: 48px;
 		line-height: 1.2;
 		text-align: center;
+		.media-max(388px, {
+			font-size: 25px;
+		
+			});
+		.media-max(550px, {
+			font-size: 30px;
+		
+			});
+			.media-max(660px, {
+				font-size: 40px;
+			
+				});
 	}
 	& .visitor__lists{
 		&__wrap{
@@ -571,6 +607,16 @@ a{
 		height: 512px;
 		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 		border-radius: 10px;
+		.media-max(605px, {
+			.col();
+			.size(12);
+		
+			});
+			.media-max(926px, {
+				.col();
+				.size(6);
+			
+				});
 	
 		&__photo{
 			padding-bottom: 38px;

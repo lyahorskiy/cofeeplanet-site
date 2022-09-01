@@ -49,37 +49,7 @@
 
         }  
     }
-    &_button{
-        display:none;
-        .media-max(840px, {
-            display: block;
-            margin-right: 15px;
-            margin-left: 15px;
-        });
-        
-       
-       
-
-  
-        .btn-reset();
-        
-        position: absolute;
-        right: 0px;
-        top: 50px;
-       
-       
-        &_slice{
-            width: 20px;
-            height: 2px;
-            background-color: #777;
-            margin-top: 4px;
-            margin-bottom: 4px;
-            
-          
-        }
-    
-}
-
+   
     &__link{
         
         color: #000;
@@ -97,5 +67,75 @@
 
     
 }
+.btn-mobile{
+    display:none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    @size: 20px;
+    @borderWidth: 2px;
+    width: @size;
+    height: @size;
+    border:none;
+    border-top: @borderWidth solid #000;
+    position: relative;
+    transition:@transT;
+        &::before,
+        &::after{
+        content:'';
+        display:block;
+        width: 100%;
+        height: @borderWidth;
+        background-color: #000;
+        position: absolute;
+        left: 0;
+        transition:@transT;
+        }
+        &::before{
+            top: 50%;
+            transform:translateY(-50%);
+            margin-top: -1px;
+        }
+        &::after{
+            bottom: 0;
 
+        }
+        &:hover{
+        border-top-color:@colorMain;
+        transition:@transT;
+        }
+        &:hover::before,
+        &:hover::after{
+        background-color: @colorMain;
+        
+       
+        }
+      
+
+        &.is_open{
+            border-top-color: transparent;
+           
+            &::after{
+                bottom: 50%;
+                transform: translateY(40%);
+                transform:translateY(-40%) rotate(-45deg);
+                
+
+
+            }
+            &::before{
+                transform:translateY(-70%) rotate(45deg);
+
+            }
+
+        }
+        .media-max(840px, {
+            display: inline-block;
+            vertical-align: middle;
+
+        });
+        
+
+    
+}
 
