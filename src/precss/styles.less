@@ -141,26 +141,43 @@ a{
 	background-image: url(../img/First\ screen.jpg);
 	background-size: cover;
 	background-position: center;
+	.media-max(520px, {
+		padding-top: 95px;
+		padding-bottom: 135px;
+	});
+
 	&__text{
 		
-		font-size: 7vw;
-		line-height: 9vw;
+		font-size: 6.25vw;
+		line-height: 1.2;
 		margin: 0;
 		margin-bottom: 56px;
 		.size(7);
-		.media-max(490px, {
-			font-size: 26px;
+		.media-max(830px, {
+			font-size: 50px;
 			line-height: 1.2;
-
-			
-		
+			.size(8);
 		});
-		
-		
-
+		.media-max(470px, {
+			font-size: 50px;
+			line-height: 1.2;
+			.size(10);
+		});
+		.media-max(386px, {
+			font-size: 50px;
+			line-height: 1.2;
+			.size(12);
+		});
+	}
+	&__navigation{
+		.media-max(830px, {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		});
 	}
 
-	&__but{
+	&__btn{
 		
 
 		&_colored{
@@ -180,24 +197,25 @@ a{
 			&:hover{
 			background-color: @colorGreenHover;
 			}
-			.media-max(500px, {
-				margin: auto;
-				position: absolute;
-				top: 0%; left: 0; bottom: 15%; right: 0;
+			// .media-max(500px, {
+			// 	margin: auto;
+			// 	position: absolute;
+			// 	top: 0%; left: 0; bottom: 15%; right: 0;
 			
 				
 			
-			});
-			.media-max(380px, {
-				margin: auto;
-				  position: absolute;
-				  top: 30%; left: 0; bottom: 20%; right: 0;
+			// });
+			// .media-max(380px, {
+			// 	margin: auto;
+			// 	  position: absolute;
+			// 	  top: 30%; left: 0; bottom: 20%; right: 0;
 			
-			});
+			// });
 
 		}
 		&_trans{
-			font-weight: 600;
+			background-color:rgba(255, 255, 255, 0.7);
+			font-weight:600;
 			font-size: 16px;
 			line-height: 20px;			
 			padding-left: 55px;
@@ -213,17 +231,9 @@ a{
 				background-color: @colorGreenHover;
 				color: #fff;
 				}
-				.media-max(500px, {
-					margin: auto;
-  					position: absolute;
-  					top: 0%; left: 0; bottom: 0; right: 0;
-				
-				});
-				.media-max(380px, {
-					margin: auto;
-  					position: absolute;
-  					top: 30%; left: 0; bottom: 0; right: 0;
-				
+				.media-max(830px, {
+					margin-left: 0;
+					margin-top: 20px;
 				});
 
 		}
