@@ -4,12 +4,20 @@
     &-block{
         display: flex;
         justify-content: space-between;
+        .media-max(926px, {
+            display: flex;
+            flex-direction: column;
+
+        });
         
         &-map{
             margin-top: 56px;
             width: 767px;
             height: 461px;
             margin-bottom: 50px;
+            .media-max(926px, {
+                width: 100%;
+            });
         }
         &-lists{
 
@@ -17,7 +25,11 @@
                 margin-top: 128px;
                 font-size: 48px;
                 line-height: 1.2;
-                padding-bottom: 58px
+                padding-bottom: 58px;
+                .media-max(926px, {
+                    order: -1;
+                });
+                
              }
 
              & a{
