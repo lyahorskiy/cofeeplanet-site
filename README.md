@@ -1,4 +1,4 @@
-Coffeeplanet
+
 This is the Coffeeplanet website, which was created to showcase web development skills using various tools, including Gulp, Webpack, Smart-grid, Slick-carousel, and Wow.js.
 
 Running the Project
