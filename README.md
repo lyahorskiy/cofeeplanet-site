@@ -4,7 +4,7 @@ This is the Coffeeplanet website, which was created to showcase web development 
 Running the Project
 To run the project, you need to follow these steps:
 
-Clone the repository using the command git clone https://github.com/your-username/coffeeplanet.git.
+Clone the repository using the command git clone https://github.com/lyahorskiy/coffeeplanet.git.
 Navigate to the project directory using the command cd coffeeplanet.
 Install dependencies using the command npm install.
 Start the project using the command npm start.
