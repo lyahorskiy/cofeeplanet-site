@@ -9,11 +9,19 @@
     }
     &__wrap{
         .row-flex();
+        .xs-block({
+			justify-content: center;
+		})
+        
     }
 
     &_list{
             .col();
             .size(4);
+	        .size-md(6);
+	        .size-sm(6);
+	        .size-xs(10);
+            
            
          &_image{
                 padding-bottom: 20px;
@@ -92,6 +100,8 @@
     }
 }
 .blog1{
+
+    
     &_h2{
         font-size: 36px;
         line-height: 1.2;

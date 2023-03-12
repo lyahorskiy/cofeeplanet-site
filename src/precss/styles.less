@@ -4,13 +4,15 @@
 @import '_header.less';
 @import '_foot.less';
 @import '_blog.less';
-@import '_new.less';
+@import (inline)'../../node_modules/animate.css/animate.min.css';
+@import '../../node_modules/slick-carousel/slick/slick.less';
 /* Set defaults */
 .reset();
 
 html,
 body{
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 *,
@@ -46,7 +48,7 @@ body{
 }
 
 .input{
-	font: inherit;
+	// font: inherit;
 	appearance: none;
 	opacity: 1;
 	transition: @transT;
@@ -140,7 +142,9 @@ a{
 	padding-bottom: 269px;
 	background-image: url(../img/First\ screen.jpg);
 	background-size: cover;
-	background-position: center;
+	width: 100%;
+	background-position: center -170px;
+	background-attachment: fixed;
 	.media-max(520px, {
 		padding-top: 95px;
 		padding-bottom: 135px;
@@ -197,20 +201,7 @@ a{
 			&:hover{
 			background-color: @colorGreenHover;
 			}
-			// .media-max(500px, {
-			// 	margin: auto;
-			// 	position: absolute;
-			// 	top: 0%; left: 0; bottom: 15%; right: 0;
 			
-				
-			
-			// });
-			// .media-max(380px, {
-			// 	margin: auto;
-			// 	  position: absolute;
-			// 	  top: 30%; left: 0; bottom: 20%; right: 0;
-			
-			// });
 
 		}
 		&_trans{
@@ -248,13 +239,6 @@ a{
 		padding-bottom: 0px;
 	});
 	
-	
-	
-	// &:focus{
-	// 	outline: none;
-	// 	box-shadow: 0px 7px 21px rgba(55, 125, 60, 0.3);
-	// 	border-radius: 50%;
-	// }
 	&__h{
 		padding-bottom: 44px;
 		.media-max(550px, {
@@ -379,13 +363,7 @@ a{
 		margin: 0;
 		padding: 0;
 		
-		&:focus{
-			outline-offset: solid 1px @colorGreenHover;
-			box-shadow: 2px 2px 5px @colorGreenHover;
-			border-radius: 1rem;
-			transition: 0.3s;
-			color: @colorGreenHover;
-		}
+	
 		&:hover{
 			color: @colorGreenHover;
 			border-bottom: 2px solid @colorGreenHover;
@@ -444,15 +422,17 @@ a{
 	}
 }
 .article-slider{
+
+	.active{
+		display: block;
+	}
+
+
 // временно //
 	&__slide{
+	
 		display: none;
-		&:first-child{
-			display: block;
-			text-align: center;
-		}
-		
-
+	
 	}
 	&__img{
 		width: 570px;
@@ -484,12 +464,6 @@ a{
 		line-height: 0px;
 		
 		
-		
-		
-		
-	
-	
-		
 		&:focus{
 			
 		transform:scale(1.2);
@@ -501,13 +475,6 @@ a{
 			background: hsl(99 50% 95%);	
 		}
 		
-		path{
-			fill: @colorMain;
-			
-		}
-		&_next{
-			margin-left: 17px;
-		}
 		
 }
 

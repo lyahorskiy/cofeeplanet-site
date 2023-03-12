@@ -11,7 +11,7 @@
             More then simple coffee
         </p>
         <nav class="banner__navigation">
-            <button class="banner__btn banner__btn_colored">
+            <button data-btn="bookBtn" class="banner__btn banner__btn_colored">
                 Book a table
             </button>
             <button class="banner__btn banner__btn_trans">
@@ -25,108 +25,195 @@
         Website for the best coffee - Coffee Planet
     </h1>
     <section id="menu" class="menu">
-        <h2 class="menu__h main-heading">
+        <h2 class="animate animate__fadeInUp menu__h main-heading">
             Make a choice
         </h2>
-        <p class="menu__text">
+        <p class="animate animate__fadeInUp menu__text">
             We promise that you'll be delighted with a cozy atmosphere and an excellent selection of drinks and snacks
         </p>
-        <ul class="menu__tabs tabs">
-            <li class="tabs__item active">
-                <a href="#coffee" class="tabs__link">coffee</a>
+        <ul class="animate animate__fadeInUp menu__tabs tabs">
+            <li class="tabs__item" data-tab="#coffee">
+                <a href="#coffe" class="tabs__link" >coffee</a>
             </li>
-            <li class="tabs__item">
-                <a href="#sweets" class="tabs__link">sweets</a>
+            <li class="tabs__item" data-tab="#sweets">
+                <a href="#sweet" class="tabs__link" >sweets</a>
             </li>
-            <li class="tabs__item">
-                <a href="#snacks" class="tabs__link">snacks</a>
+            <li class="tabs__item" data-tab="#snacks">
+                <a href="#snack" class="tabs__link" >snacks</a>
             </li>
         </ul>
-        <ul class="menu__content tabs-content">
-            <li id="coffee" class="tabs-content__section active">
+        <ul class="animate animate__fadeInUp menu__content tabs-content">
+            <li id="coffee" class="animate__fadeIn tabs-content__section active">
+
                 <ul class="tabs-content__wrap">
                     <li class="product">
-                        <img src="img/img-coffee1.png" alt="product" class="product__pic">
+                        <noscript class="loading-lazy">
+                            <picture>
+                                <source srcset="img/webp/img-coffee1.webp" type="image/webp">
+                                <img loading="lazy" src="img/img-coffee1.png" alt="Cappuccino photo" class="product__pic" width="275" height="316">
+                            </picture>
+                         </noscript>
                         <h3 class="product__name">Blonde Cappuccino</h3>
                         <p class="product__price">$5</p>
                     </li>
+
                     <li class="product">
-                        <img src="img/img-coffee2.png" alt="product" class="product__pic">
+                        <noscript class="loading-lazy">
+                            <picture>
+                                <source srcset="img/webp/img-coffee2.webp" type="image/webp">
+                                <img loading="lazy" src="img/img-coffee2.png" alt="Latte photo" class="product__pic" width="275" height="316">
+                            </picture>
+                        </noscript>
                         <h3 class="product__name">Coconutmilk  Latte</h3>
                         <p class="product__price">$3</p>
                     </li>
+
                     <li class="product">
-                        <img src="img/img-coffee3.png" alt="product" class="product__pic">
+                        <noscript class="loading-lazy">
+                            <picture>
+                                <source srcset="img/webp/img-coffee3.webp"  type="image/webp">
+                                <img loading="lazy" src="img/img-coffee3.png" alt="Chocolate Mocha photo" class="product__pic" width="275" height="316">
+                            </picture>
+                        </noscript>
                         <h3 class="product__name">Dark Chocolate Mocha</h3>
                         <p class="product__price">$4</p>
                     </li>
+
                     <li class="product">
-                        <img src="img/img-coffee4.png" alt="product" class="product__pic">
+                        <noscript class="loading-lazy">
+                            <picture>
+                                <source srcset="img/webp/img-coffee4.webp"  type="image/webp">
+                                <img loading="lazy" src="img/img-coffee4.png" alt="Honey Latte photo" class="product__pic" width="275" height="316">
+                            </picture>
+                        </noscript>
                         <h3 class="product__name">Oatmilk Honey Latte</h3>
                         <p class="product__price">$3</p>
                     </li>
                 </ul>
             </li>
-            <li id="sweets"class="tabs-content__section">
+
+            <li id="sweets"class="animate__fadeIn tabs-content__section">
                 <ul class="tabs-content__wrap">
                     <li class="product">
-                        <img src="img/img-coffee1.png" alt="product" class="product__pic">
-                        <h3 class="product__name">swets</h3>
+                        <noscript class="loading-lazy">
+                            <picture>
+                                <source srcset="img/webp/img-sweets1.webp" type="image/webp">
+                                <img loading="lazy" src="img/img-sweets1.png" alt="product" class="product__pic" width="275" height="316">
+                            </picture>
+                        </noscript>
+                        <h3 class="product__name">sweets</h3>
                         <p class="product__price">$5</p>
                     </li>
+
                     <li class="product">
-                        <img src="img/img-coffee2.png" alt="product" class="product__pic">
-                        <h3 class="product__name">swets</h3>
+                        <noscript class="loading-lazy">
+                            <picture>
+                                <source srcset="img/webp/img-sweets2.webp" type="image/webp">
+                                <img loading="lazy" src="img/img-sweets2.png" alt="product" class="product__pic" width="275" height="316">   
+                            </picture>
+                        </noscript>
+                        <h3 class="product__name">sweets</h3>
                         <p class="product__price">$3</p>
                     </li>
+
                     <li class="product">
-                        <img src="img/img-coffee3.png" alt="product" class="product__pic">
-                        <h3 class="product__name">swets</h3>
+                         <picture>
+                             <noscript class="loading-lazy">
+                                <source srcset="img/webp/img-sweets3.webp" type="image/webp">
+                                <img loading="lazy" src="img/img-sweets3.png" alt="product" class="product__pic" width="275" height="316">    
+                            </picture>
+                        </noscript>
+                        <h3 class="product__name">sweets</h3>
                         <p class="product__price">$4</p>
                     </li>
+
                     <li class="product">
-                        <img src="img/img-coffee4.png" alt="product" class="product__pic">
-                        <h3 class="product__name">swets</h3>
+                        <noscript class="loading-lazy">
+                            <picture>
+                                <source srcset="img/webp/img-sweets4.webp" type="image/webp">
+                                <img loading="lazy" src="img/img-sweets4.png" alt="product" class="product__pic" width="275" height="316"> 
+                            </picture>
+                        </noscript>
+                        <h3 class="product__name">sweets</h3>
                         <p class="product__price">$3</p>
                     </li>
+
                 </ul>
             </li>
-            <li id="snacks"class="tabs-content__section">
+
+            <li id="snacks"class="animate__fadeIn tabs-content__section">
                 <ul class="tabs-content__wrap">
                     <li class="product">
-                        <img src="img/img-coffee1.png" alt="product" class="product__pic">
-                        <h3 class="product__name">snaks</h3>
+                        <noscript class="loading-lazy">
+                            <picture>
+                                <source srcset="img/webp/img-snacks1.webp" type="image/webp">
+                                <img loading="lazy" src="img/img-snacks1.png" alt="product" class="product__pic" width="275" height="316">
+                            </picture>
+                        </noscript>
+                        <h3 class="product__name">snacks</h3>
                         <p class="product__price">$5</p>
                     </li>
+
                     <li class="product">
-                        <img src="img/img-coffee2.png" alt="product" class="product__pic">
-                        <h3 class="product__name">snaks</h3>
+                        <noscript class="loading-lazy">
+                            <picture>
+                                <source srcset="img/webp/img-snacks2.webp" type="image/webp">
+                                <img loading="lazy" src="img/img-snacks2.png" alt="product" class="product__pic" width="275" height="316">
+                            </picture>
+                        </noscript>
+                        <h3 class="product__name">snacks</h3>
                         <p class="product__price">$3</p>
                     </li>
+
                     <li class="product">
-                        <img src="img/img-coffee3.png" alt="product" class="product__pic">
-                        <h3 class="product__name">snaks</h3>
+                        <noscript class="loading-lazy">
+                            <picture>
+                                <source srcset="img/webp/img-snacks3.webp" type="image/webp">
+                                <img loading="lazy" src="img/img-snacks3.png" alt="product" class="product__pic" width="275" height="316">
+                            </picture>
+                        </noscript>
+                        <h3 class="product__name">snacks</h3>
                         <p class="product__price">$4</p>
                     </li>
+
                     <li class="product">
-                        <img src="img/img-coffee4.png" alt="product" class="product__pic">
-                        <h3 class="product__name">snaks</h3>
+                        <noscript class="loading-lazy">
+                            <picture>
+                                <source srcset="img/webp/img-snacks4.webp" type="image/webp">
+                                <img loading="lazy"src="img/img-snacks4.png" alt="product" class="product__pic" width="275" height="316">
+                            </picture>
+                        </noscript>
+                        <h3 class="product__name">snacks</h3>
                         <p class="product__price">$3</p>
                     </li>
                 </ul>
             </li>
         </ul>
     </section>
+
     <article id="about" class="about">
-        <aside aria-label="Slider with photos"class="about__slider article-slider">
-            <figure class="about__figure article-slider__container">
+        <aside aria-label="Slider with photos"class="animate animate__fadeInUp about__slider article-slider">
+           
+            <figure class="about__figure article-slider__container ">
                 <div class="article-slider__slide">
-                    <img src="img/img-slider-1.png" alt="Photo of cafe" class="artical-slider__img">
+                    <noscript class="loading-lazy">
+                        <picture>
+                            <source srcset="img/webp/img-slider-1.webp" type="image/webp">
+                            <img loading="lazy" src="img/img-slider-1.png" alt="Photo of cafe" class="artical-slider__img" width= "570" height= "378">   
+                        </picture>
+                    </noscript>
                 </div>
+
                 <div class="article-slider__slide">
-                    <img src="img/img-slider-2.png" alt="Photo of cafe" class="artical-slider__img">
+                    <noscript class="loading-lazy">
+                        <picture>
+                            <source srcset="img/webp/img-slider-2.webp" type="image/webp">
+                            <img loading="lazy" src="img/img-slider-2.png" alt="Photo of cafe" class="artical-slider__img" width= "570" height= "378">
+                        </picture>
+                    </noscript>
                 </div>
             </figure>
+            
             <p class="article-slider__btns">
                 <button aria-label="Previous slide"class="article-slider__btn article-slider__btn_prev">
                     {% include './parts/svgo/ico-arrow-left.svg' %}
@@ -136,51 +223,55 @@
                 </button>
             </p>  
         </aside>
-        <h2 class="main-heading about__h">
+        <h2 class="animate animate__fadeInUp main-heading about__h">
             Welcome to CoffeePlanet
         </h2>
-        <p class="about__text">
+        <p class="animate animate__fadeInUp about__text">
             The CoffeePlanet is open in Westchase! We are excited to introduce our Coffee Shop. If you crave great coffee, you’ll love knowing that we provide a real alternative to chains with handcrafted coffee and espresso drinks, a full tea bar, and real food options. 
         </p>
-        <p class="about__text about__text_two">
+        <p class="animate animate__fadeInUp about__text about__text_two">
             “We grind for you”… our local baristas know that great espresso takes more than pushing a button. We work hard to deliver great taste while also providing knowledgeable service, perfect if you just want to try something new.
         </p>
-        <p class="about__text about__text_three">
+        <p class="animate animate__fadeInUp about__text about__text_three">
             Our Cafe delivers way beyond the traditional coffee shop favorites (although we think our homemade pastries are pretty good). We have traditional breakfast choices, including eggs and pancakes, and plenty of healthy options (including gluten free, vegetarian, and vegan). Our lunch offerings include a wide variety of salads,  sandwiches and flatbreads.   And as for the late nighters… we know you’ll appreciate having a spot for your dessert fix as well as a spiked coffee.
         </p>
-        <button class="about__btn">
+        <button data-btn="bookBtn"class="animate animate__fadeInUp about__btn">
             Book a table in our cozy coffee shop    
         </button>
     </article>
     <section id="features"class="features ">
-        <h2 class="features features_h">
+        <h2 class="animate animate__fadeInUp features features_h">
             Our features
         </h2>
-        <p class="features features_text">
+        <p class="animate animate__fadeInUp features features_text">
             Come to make sure The CoffeePlanet at Westchase can actually deliver what we promise — a great coffee shop experience.
         </p>
-        <ul class="features features__wrap">
+
+        <ul class="animate animate__fadeInUp features features__wrap">
             <li class="feature">
                 <img src="img/icons/ico-features-1.svg" alt="picture coffee and tea">
                 <h3>Coffee and tea</h3>
             </li>
-            <div class="polosa">
-                
+
+            <div class="polosa"> 
             </div>
+
             <li class="feature">
                 <img src="img/icons/ico-features-2.svg" alt="picture tasty sweets">
                 <h3>Tasty sweets</h3>
             </li>
-            <div class="polosa">
-                
+
+            <div class="polosa"> 
             </div>
+
             <li class="feature">
                 <img src="img/icons/ico-features-3.svg" alt="picture free wifi">
                 <h3>Free WiFi</h3>
             </li>
+
             <div class="polosa">
-                
             </div>
+
             <li class="feature">
                 <img src="img/icons/ico-features-4.svg" alt="picture comfortable seats">
                 <h3>Comfortable seats</h3>
@@ -189,12 +280,18 @@
 
     </section>
     <article class="visitors">
-        <h2 class="visitors_head">
+        <h2 class="animate animate__fadeInUp features features__wrap visitors_head">
             Our happy visitors say:
         </h2>
-        <ul class="visitors visitor__lists__wrap">
+        <ul class="animate animate__fadeInUp features features__wrap visitors visitor__lists__wrap">
             <li class="visitor__lists__list 1">
-                <img class="visitor__lists__list__photo" src="img/img-feedback-1.jpg" alt="photo Dennis Simpson">
+                <noscript class="loading-lazy">
+                    <picture>
+                        <source srcset="img/webp/img-feedback-1.webp" type="image/webp">
+                        <img loading="lazy" class="visitor__lists__list__photo" src="img/img-feedback-1.jpg" alt="photo Dennis Simpson">
+                    </picture>
+                </noscript>
+                
                 <h3 class="visitor__lists__list__he">
                     Dennis Simpson
                 </h3>
@@ -205,8 +302,14 @@
                     30.04.2019
                 </p>
             </li>
+
             <li class="visitor__lists__list 2">
-                <img class="visitor__lists__list__photo" src="img/img-feedback-2.jpg" alt="photo Andrew Smith">
+                <noscript class="loading-lazy">
+                    <picture>
+                        <source srcset="img/webp/img-feedback-2.webp" type="image/webp">
+                        <img loading="lazy"class="visitor__lists__list__photo" src="img/img-feedback-2.jpg" alt="photo Andrew Smith">
+                    </picture>
+                </noscript>
                 <h3 class="visitor__lists__list__he">
                     Andrew Smith
                 </h3>
@@ -217,8 +320,15 @@
                     24.08.2018
                 </p>
             </li>
+
             <li class="visitor__lists__list 3">
-                <img class="visitor__lists__list__photo" src="img/img-feedback-3.jpg" alt="photo Georg Cuper">
+                <noscript class="loading-lazy">
+                    <picture>
+                        <source srcset="img/webp/img-feedback-3.webp" type="image/webp">
+                        <img loading="lazy" class="visitor__lists__list__photo" src="img/img-feedback-3.jpg" alt="photo Georg Cuper">
+                    </picture>
+                </noscript>
+                
                 <h3 class="visitor__lists__list__he">
                     George Cuper
                 </h3>

@@ -29,37 +29,46 @@
                 .media-max(926px, {
                     order: -1;
                 });
-                
-             }
-
-             & a{
-                
-             &:focus{
-                box-shadow: none;
-            }
-             }
-             &-link{
-                fill: #000;
-                margin-top: 45px;
-                margin-right: 11px;
-        
-                &:hover{
-                    
-                    transform: rotateY(360deg);
-                    transition: 2s; 
-                    fill: @colorMain;
-                    
-                    
-        
             
-    
-                } 
                 
              }
-
-            &-list{
+             
+             &-listt{
                 display: flex;
-                align-items: baseline;
+                align-items:baseline;
+                
+                &:last-child{
+                    padding-left: 13px;
+                    padding-bottom: 18px;
+                }
+
+             }
+
+           
+             &-link{
+                margin-top: 45px;
+                margin-right: 10px;
+                & a{
+                    color:#000;
+                    &:hover{
+                        
+                        color: @colorGreenHover;
+                        transition: 0.3s; 
+                    }
+
+                }
+                }
+                
+                
+                
+                &-list{
+                    display: flex;
+                    align-items:baseline;
+                    color:#000;
+                &:hover{
+                    color: @colorGreenHover;
+                    transition: 0.3s;
+                }
 
                & img{
                 padding-right: 13px;
@@ -84,16 +93,15 @@
     }
 }
 
+.contacts__socials{
+    display: flex;
+    
+}
 
-
-
-
-
-
-
-
+//MODAL
 
 .modal-overlay{
+    z-index: 5;
     display: none;
     position: fixed;
     top: 0;
@@ -138,6 +146,7 @@
 
 }
 .modal{
+    
    display: none;
     width: 97%;
     position: absolute;
@@ -218,10 +227,7 @@
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-  
- 
-  
-  
+
     }
 }
 .modal-alert{
@@ -251,5 +257,187 @@
         margin-bottom: 217px;
     }
 } 
-    
 
+.preloader{
+    display:none;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    animation-name: allObjects;
+    animation-duration: 1s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+    
+    &::before,
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        top: 0;
+        z-index: 2;
+        animation-delay: 4s;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+
+    }
+    &::before{
+        left: 0;
+        animation-name: wallLeft;
+    }
+    &::after{
+        right: 0;
+        animation-name: wallRight;
+    }
+    &__logo{
+        display: block;
+        position: absolute;
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+        margin-top: 60px;
+        margin-left: -12px;
+        max-width: 250px;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        animation: logo 1s;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+    }
+    svg{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60vw;
+        min-width: 300px;
+        height: auto;
+        z-index: 3;
+    }
+    .bg{
+        fill: none;
+    }
+    .cup{
+        fill: none;
+        stroke: #000;
+        stroke-width: 2;
+        stroke-dashoffset: 671.36;
+        stroke-dasharray: 671.36;
+        animation-name: draw;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+    .liquid{
+        fill: #351f02;
+        stroke: none;
+        transform: translateY(100%);
+        animation-name: fillCoffee;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+
+    }
+    .steam{
+        fill: none;
+        stroke: #000;
+        stroke-width: 2;
+        stroke-dashoffset: 192.47;
+        stroke-dasharray: 192.47;
+        animation-name: draw;
+        animation-duration: 2s;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+
+    }
+    .sleeve{
+        stroke: #000;
+        stroke-width: 1;
+        fill: @colorMain;
+        stroke-dashoffset: 453.58;
+        stroke-dasharray: 453.58;
+        animation-name: draw, fillGreen;
+        animation-duration: 1s, 1s;
+        animation-fill-mode: forwards;
+    }
+    .lid{
+        stroke: #000;
+        stroke-width: 2;
+        fill: @colorMain;
+        stroke-dashoffset: 431.62;
+        stroke-dasharray: 431.62;
+        animation-name: draw, fillGreen;
+        animation-duration: 1s, 1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes draw{
+        to{
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes fillGreen{
+        from{
+            fill:#fff
+        }
+        to{
+            fill: @colorMain;
+        }
+    }
+
+    @keyframes fillCoffee{
+        to{
+            transform: translateY(5%);
+        }
+    }
+
+    @keyframes logo{
+        from{
+            transform: translate(-50%, -50%) scale(0.5);
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+
+    @keyframes wallLeft{
+        from{
+            opacity: 1;
+            left: 0;
+        }
+        to{
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+    }
+
+    @keyframes wallRight{
+        from{
+            opacity: 1;
+            right: 0;
+        }
+        to{
+            opacity: 0;
+            transform: translateX(100%);
+        }
+    }
+
+    @keyframes allObjects{
+        from{
+            opacity: 1;
+        }
+        to{
+            opacity: 0;
+            height: 0;
+        }
+    }
+
+}
