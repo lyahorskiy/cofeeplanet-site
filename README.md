@@ -4,10 +4,11 @@ This is the Coffeeplanet website, which was created to showcase web development 
 Running the Project
 To run the project, you need to follow these steps:
 
-Clone the repository using the command git clone https://github.com/lyahorskiy/cofeeplanet-site.git
-Navigate to the project directory using the command cd coffeeplanet.
-Install dependencies using the command npm install.
-Start the project using the command npm start.
+1. Clone the repository using the command git clone "https://github.com/lyahorskiy/cofeeplanet-site.git"
+2. Navigate to the project directory using the command "cd coffeeplanet".
+3. Install dependencies using the command "npm install".
+4. Start the project using the command "npm start".
+
 Tools Used
 Gulp
 Gulp is a tool for automating tasks in web development. In the Coffeeplanet project, Gulp is used for compiling SCSS files, optimizing images, concatenating and minifying JavaScript files, and more.
